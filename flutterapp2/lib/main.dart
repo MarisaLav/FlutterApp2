@@ -39,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('Interactive Flutter App'),
       ),
+      backgroundColor: Color(0xFFF1E6FA), // Light purple background color
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
