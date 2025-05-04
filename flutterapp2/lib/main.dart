@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key? key}) : super(key: key);
 
@@ -42,10 +43,26 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('$_counter', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold)),
+            Text(
+              '$_counter',
+              style: TextStyle(
+                fontSize: 40,  // Large font size for the counter
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
+              ),
+            ),
             ElevatedButton(
               onPressed: _incrementCounter,
-              child: Text('Add One'),
+              child: Text(
+                'Add One',
+                style: TextStyle(
+                  fontSize: 24,  // Larger font size for the button text
+                ),
+              ),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),  // Increased padding
+                minimumSize: Size(200, 60),  // Set a minimum size for the button
+              ),
             ),
           ],
         ),
